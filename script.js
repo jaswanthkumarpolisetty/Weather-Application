@@ -10,6 +10,7 @@ async function checkWeather(city){
         document.querySelector(".error").style.display="block";
         document.querySelector(".weather").style.display="none";
     }else{
+    document.querySelector(".error").style.display="none";
     var data=await responce.json();
     document.querySelector(".temp").innerHTML=data.main.temp + "°C";
     document.querySelector(".humidity").innerHTML=Math.round(data.main.humidity) + "%";
