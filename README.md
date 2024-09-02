@@ -1,62 +1,55 @@
-# Weather API Web Application
+# Weather Application
 
-This project is a responsive weather web application that fetches real-time weather data from an API and displays it to the user. The application is built using HTML, CSS, and JavaScript and is deployed on Vercel.
+This Weather Application allows users to check the current weather conditions for any city by entering the city name. The app provides information such as temperature, humidity, wind speed, and weather conditions. The app also includes error handling for invalid city names.
 
 ## Features
 
-- **Real-Time Weather Data:** Fetches current weather data for any city using a weather API.
-- **Responsive Design:** Fully responsive, ensuring a smooth user experience on all devices, including desktops, tablets, and mobile phones.
-- **User-Friendly Interface:** Clean and modern UI with intuitive design elements.
-- **Cross-Browser Compatibility:** Works seamlessly across all major web browsers.
-
-## Live Demo
-
-You can access the live demo of the application here: [Weather API App]()
+- **City-Based Weather Search**: Enter the name of any city to retrieve the current weather data.
+- **Temperature Display**: Shows the current temperature in Celsius.
+- **Humidity Display**: Displays the current humidity percentage.
+- **Wind Speed Display**: Displays the wind speed in km/h.
+- **Weather Icon**: Dynamically changes the weather icon based on the weather conditions (e.g., Clouds, Rain, Clear, Drizzle, Mist).
+- **Error Handling**: Displays an error message if the city name is not found or if an invalid city name is entered.
+- **Responsive UI**: Weather information is hidden and the error message is shown if the city is not found. When valid city data is fetched, the weather information is displayed.
 
 ## Getting Started
-
-Follow the instructions below to set up the project locally.
 
 ### Prerequisites
 
 - A modern web browser
-- An internet connection to fetch weather data
+- Internet connection to fetch weather data from the OpenWeatherMap API
 
 ### Installation
 
-1. **Clone the repository:**
+1. Clone the repository or download the source code.
 
     ```bash
-    git clone https://github.com/your-username/weather-api-app.git
+    git clone https://github.com/yourusername/weather-app.git
+    cd weather-app
     ```
 
-2. **Navigate to the project directory:**
+2. Make sure to have an API key from [OpenWeatherMap](https://openweathermap.org/api).
 
-    ```bash
-    cd weather-api-app
+3. Replace the `apiKey` variable in `script.js` with your own API key.
+
+    ```javascript
+    const apiKey = "your_api_key_here";
     ```
 
-3. **Open the project:**
+4. The app is now ready to use. You can open the `index.html` file in your browser to start checking the weather.
 
-    Open the `index.html` file in your preferred web browser.
+### File Structure
 
-### Usage
-
-1. **Search for a City:**
-
-   - Enter the name of a city in the search bar and press "Enter" or click the "Search" button.
-   - The application will display the current weather, including temperature, humidity, wind speed, and a weather description.
-
-2. **Responsive Layout:**
-
-   - The application layout adjusts automatically based on the screen size, ensuring a consistent user experience on any device.
-
-### Project Structure
-
-```plaintext
-weather-api-app/
+```bash
+weather-app/
 │
-├── index.html            # Main HTML file
-├── styles.css            # CSS file for styling
-├── script.js             # JavaScript file for fetching and displaying weather data
-└── README.md             # Project documentation
+├── images/                     # Folder containing weather icons
+│   ├── clouds.png
+│   ├── clear.png
+│   ├── drizzle.png
+│   ├── mist.png
+│   └── rain.png
+│
+├── index.html                  # Main HTML file
+├── style.css                   # CSS for styling the app
+└── script.js                   # JavaScript file containing the main logic
